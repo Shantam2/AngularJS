@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="myscript.js"></script>
+</head>
+
+<body ng-controller="MainController">
+    <h1>{{message}}</h1> {{878/44}} The name is {{user.name}}
+    <br>
+    <img ng-src="{{user.avatar_url}}" alt="user.name">
+
+    <form ng-submit="search(username)">
+        <input type="text" placeholder="Enter username" ng-model="username">
+        <input type="button" value="Search">
+        <br> {{username}}
+    </form>
+
+
+    <!--<table>
+        <thead>
+            <th>
+                name
+            </th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="repo in repos">
+                <td> {{repo.name}}</td>
+            </tr>
+        </tbody>
+    </table>-->
+
+    <div ng-repeat="repo in repos">
+        {{repo.name}}
+    </div>
+
+</body>
+
+</html>
